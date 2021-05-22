@@ -1,0 +1,55 @@
+type Query {
+    user(id:ID!):User
+    feed(id:ID!):Feed
+    feeds:[Feed],
+    users:[User],
+}
+
+type Mutation{
+    createFeed(input:CreateFeedInput):Feed
+    createUser(input:CreateUserInput):User
+    updateUser(input:UpdateUserInput):User
+    updateFeed(input:UpdateFeedInput):Feed
+
+}
+
+type User{
+    id:ID!,
+    email:String,
+    username:String,
+    feeds:[Feed],
+    password:String
+}
+
+type Feed{
+    id:ID!,
+    title:String,
+    description:String,
+    userId:User,
+}
+
+
+
+input CreateFeedInput{
+    title:String,
+    description:String,
+}
+
+input CreateUserInput {
+    email:String,
+    password:String,
+    username:String
+}
+
+
+input UpdateFeedInput{
+    id:ID!
+    title:String,
+    description:String,
+}
+
+input UpdateUserInput {
+    id:ID!
+    email:String,
+    username:String
+}
