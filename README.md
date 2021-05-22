@@ -1,6 +1,6 @@
 # NODE_ApolloServer
 
-> Simple Crud Operation for users, feeds. This app uses Node, Express, ApolloServer ,mongoose.
+> Simple Crud Operation for users, feeds. This app uses Node, Express, ApolloServer ,mongoose and 
 > have Rest and Graphql apis.
 
 
